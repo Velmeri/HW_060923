@@ -34,9 +34,9 @@ namespace HW_060923
 
 					while (x <= 100) {
 						y = x;
-						// Scale the coordinates as needed
-						int pixelX = x * 5; // Adjust scaling factor
-						int pixelY = y * 5; // Adjust scaling factor
+						
+						int pixelX = x * 5;
+						int pixelY = y * 5;
 						g.DrawLine(Pens.Black, xPrevious, yPrevious, pixelX, pixelY);
 
 						xPrevious = pixelX;
@@ -47,12 +47,12 @@ namespace HW_060923
 
 				case "2":
 					xPrevious = -100;
-					yPrevious = -100 * -100; // Initial y for x^2
+					yPrevious = -100 * -100;
 
 					while (x <= 100) {
 						y = x * x;
-						int pixelX = x * 5; // Adjust scaling factor
-						int pixelY = y * 5; // Adjust scaling factor
+						int pixelX = x * 5;
+						int pixelY = y * 5;
 						g.DrawLine(Pens.Black, xPrevious, yPrevious, pixelX, pixelY);
 
 						xPrevious = pixelX;
@@ -63,12 +63,12 @@ namespace HW_060923
 
 				case "3":
 					xPrevious = -100;
-					yPrevious = 0; // Initial y for sqrt(x)
+					yPrevious = 0;
 
 					while (x <= 100) {
-						y = Math.Sqrt(Math.Max(x, 0)); // Ensure y is non-negative
-						int pixelX = x * 5; // Adjust scaling factor
-						int pixelY = (int)(y * 5); // Adjust scaling factor
+						y = Math.Sqrt(Math.Max(x, 0));
+						int pixelX = x * 5;
+						int pixelY = (int)(y * 5);
 						g.DrawLine(Pens.Black, xPrevious, yPrevious, pixelX, pixelY);
 
 						xPrevious = pixelX;
